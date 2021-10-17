@@ -26,7 +26,7 @@ export default class openTicketButton extends InteractionHandler {
             parent: openTickets
         })
 
-        let openInfoRow = new MessageActionRow()
+        let infoRow1 = new MessageActionRow()
             .addComponents([
                 new MessageButton()
                     .setCustomId('ticketerCloseTicket')
@@ -40,19 +40,28 @@ export default class openTicketButton extends InteractionHandler {
                     .setEmoji('✅')
                     .setLabel('Open')
                     .setStyle('SUCCESS')
-                    .setDisabled(true),
-
-                new MessageButton()
-                    .setCustomId('ticketerClaimTicket')
-                    .setEmoji('👤')
-                    .setLabel('Claim')
-                    .setStyle('PRIMARY')
-                    .setDisabled(false)
+                    .setDisabled(true)
             ])
+
+        let infoRow2 = new MessageActionRow().addComponents([
+            new MessageButton()
+                .setCustomId('ticketerClaimTicket')
+                .setEmoji('👤')
+                .setLabel('Claim')
+                .setStyle('PRIMARY')
+                .setDisabled(false),
+
+            new MessageButton()
+                .setCustomId('ticketerCreateTranscript')
+                .setEmoji('📋')
+                .setLabel('Transcript')
+                .setStyle('SECONDARY')
+                .setDisabled(false)
+        ])
 
         //@ts-ignore
         interaction.message.edit({
-            components: [openInfoRow]
+            components: [infoRow1, infoRow2]
         })
 
         await interaction.followUp({

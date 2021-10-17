@@ -42,27 +42,38 @@ export default class SupportRequestListener extends Listener {
             ]
         });
 
-        let infoRow = new MessageActionRow()
+        let infoRow1 = new MessageActionRow()
             .addComponents([
                 new MessageButton()
                     .setCustomId('ticketerCloseTicket')
                     .setEmoji('❎')
                     .setLabel('Close')
-                    .setStyle('DANGER'),
+                    .setStyle('DANGER')
+                    .setDisabled(false),
 
                 new MessageButton()
                     .setCustomId('ticketerOpenTicket')
                     .setEmoji('✅')
                     .setLabel('Open')
                     .setStyle('SUCCESS')
-                    .setDisabled(true),
-
-                new MessageButton()
-                    .setCustomId('ticketerClaimTicket')
-                    .setEmoji('👤')
-                    .setLabel('Claim')
-                    .setStyle('PRIMARY')
+                    .setDisabled(true)
             ])
+
+        let infoRow2 = new MessageActionRow().addComponents([
+            new MessageButton()
+                .setCustomId('ticketerClaimTicket')
+                .setEmoji('👤')
+                .setLabel('Claim')
+                .setStyle('PRIMARY')
+                .setDisabled(false),
+
+            new MessageButton()
+                .setCustomId('ticketerCreateTranscript')
+                .setEmoji('📋')
+                .setLabel('Transcript')
+                .setStyle('SECONDARY')
+                .setDisabled(false)
+        ])
 
         const infoMessage = await supportChannel?.send({
             content: `( ${message.author} | <@&${server.supportRole}> )  -  New Ticket`,
@@ -76,7 +87,7 @@ export default class SupportRequestListener extends Listener {
                     },
                 ]
             }],
-            components: [infoRow]
+            components: [infoRow1, infoRow2]
         })
 
         await Ticket.create({

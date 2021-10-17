@@ -81,14 +81,14 @@ export default class SupportRequestListener extends Listener {
                 title: `Support Ticket`,
                 fields: [
                     {
-                        name: 'Ticket Info',
+                        name: '*Ticket Info*',
                         value: `**Username:** ${message.author.tag}\n**Nickname:** ${message.guild?.members.cache.get(message.author.id)?.nickname || '*No Nickname*'}`,
                         inline: true
                     },
                 ]
             }],
             components: [infoRow1, infoRow2]
-        })
+        }).then(msg => msg.pin())
 
         await Ticket.create({
             _id: supportChannel?.id,

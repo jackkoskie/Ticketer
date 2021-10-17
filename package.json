@@ -1,0 +1,25 @@
+{
+  "name": "ticketer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_ENV=production&&node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sapphire/framework": "^2.0.0-pr-293.83ddd9e9.0",
+    "custom-env": "^2.0.1",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.1",
+    "nodemon": "^2.0.13",
+    "typescript": "^4.4.3"
+  }
+}

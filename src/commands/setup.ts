@@ -11,7 +11,7 @@ export default class setupCommand extends Command {
         })
     }
 
-    async run(message: Message, args: Args) {
+    async messageRun(message: Message, args: Command.ParsePreProcessResult<this>) {
         const { channel } = message;
 
         if (channel.type != 'GUILD_TEXT') return message.reply('You can only use text channels as support channels.');
@@ -19,6 +19,7 @@ export default class setupCommand extends Command {
         //@ts-ignore
         if (!channel.parentId) return message.reply('Support channels must be in a category!')
 
+        //@ts-ignore
         const supportRole = await args.pick('role').catch(() => {
             message.reply('You must provide a support role!');
             return;

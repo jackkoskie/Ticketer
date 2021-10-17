@@ -16,7 +16,11 @@ const client = new SapphireClient({
     defaultPrefix: process.env.PREFIX,
     intents: '14071',
     presence: { status: 'online', activities: [{ name: 'for tickets! | Ticketer', type: 'WATCHING' }] },
-    loadDefaultErrorListeners: true
+    loadDefaultErrorListeners: true,
+    defaultCooldown: {
+        limit: 1,
+        delay: 3,
+    },
 });
 export { client };
 

@@ -10,7 +10,7 @@ export default class PingCommand extends Command {
         });
     }
 
-    async run(message: Message) {
+    async messageRun(message: Message) {
         const response = await message.channel.send('Ping...');
         const latency = Date.now() - message.createdTimestamp;
 

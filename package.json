@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sapphire/framework": "^2.0.0-pr-293.83ddd9e9.0",
+    "@sapphire/framework": "^2.2.0-pr-293.0de89e12.0",
     "custom-env": "^2.0.1",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",

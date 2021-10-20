@@ -4,6 +4,7 @@ bin
 # Dev Files
 node_modules
 tmp
+.vscode
 
 # Environment Variables
 .env.development

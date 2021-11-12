@@ -3,10 +3,10 @@
 import { SapphireClient } from "@sapphire/framework";
 
 //@ts-ignore
-import { env } from "custom-env";
+import env from "dotenv";
 import { connect, connection } from "mongoose";
 import { time } from "./utils/date";
-env(process.env.NODE_ENV || 'development');
+env.config()
 
 if (!Date.now) {
     Date.now = function () { return new Date().getTime(); }

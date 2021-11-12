@@ -50,13 +50,6 @@ export default class closeTicketButton extends InteractionHandler {
 
         let infoRow2 = new MessageActionRow().addComponents([
             new MessageButton()
-                .setCustomId('ticketerClaimTicket')
-                .setEmoji('👤')
-                .setLabel('Claim')
-                .setStyle('PRIMARY')
-                .setDisabled(true),
-
-            new MessageButton()
                 .setCustomId('ticketerCreateTranscript')
                 .setEmoji('📋')
                 .setLabel('Transcript')

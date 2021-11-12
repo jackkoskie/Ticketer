@@ -61,13 +61,6 @@ export default class SupportRequestListener extends Listener {
 
         let infoRow2 = new MessageActionRow().addComponents([
             new MessageButton()
-                .setCustomId('ticketerClaimTicket')
-                .setEmoji('👤')
-                .setLabel('Claim')
-                .setStyle('PRIMARY')
-                .setDisabled(false),
-
-            new MessageButton()
                 .setCustomId('ticketerCreateTranscript')
                 .setEmoji('📋')
                 .setLabel('Transcript')

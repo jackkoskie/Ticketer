@@ -10,9 +10,11 @@ export default class HelpCommand extends Command {
     }
 
     messageRun(message: Message) {
+        const prefix = client.options.defaultPrefix
+
         const helpEmbed = {
             title: 'Setup Help',
-            description: `To get started, create a channel, and name is somethings along the lines of \`#support\`. Create a role that will be able to respond to support tickets along the lines of \`@Support Team\`. Then navigate to this channel and run the command \`${client.options.defaultPrefix}setup <support role>\` to finalise the setup process. Please note if you run this command again it will overwrite the previous setup and the other will no longer work.\n\n> **Want to change the support role?**\n> Simply rerun the setup command with the new support role.\n\n> **Want to change channels?**\n> Simply rerun the setup command in the new channel and delete the old support message.`,
+            description: `To get started, create a channel, and name is somethings along the lines of \`#support\`. Create a role that will be able to respond to support tickets along the lines of \`@Support Team\`. Then navigate to this channel and run the command \`${prefix}setup <support role>\` to finalise the setup process. Please note if you run this command again it will overwrite the previous setup and the other will no longer work.\n\n> **Want to change the support role?**\n> Simply rerun the setup command with the new support role.\n\n> **List of Commands**\n> ${prefix}help - Opens this menu\n> ${prefix}ping - Tests the response time of the bot\n> ${prefix}setup - Sets up a channel to be used as a support channel\n> ${prefix}invite - Shows an invite for the bot`,
             timestamp: Date.now(),
             footer: {
                 text: '© Ticketer, 2021'

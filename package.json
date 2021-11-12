@@ -9,6 +9,9 @@
     "postinstall": "tsc"
   },
   "keywords": [],
+  "engines": {
+    "node": ">=16.6.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

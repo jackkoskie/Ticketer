@@ -2,7 +2,6 @@ import { Args, Command, PieceContext, UserError } from "@sapphire/framework";
 import { Message } from "discord.js";
 import { client } from "..";
 import { Server } from "../models/serverModel";
-import { round } from "../utils/rounding";
 
 export default class setupCommand extends Command {
     constructor(context: PieceContext) {

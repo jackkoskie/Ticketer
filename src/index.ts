@@ -15,7 +15,7 @@ if (!Date.now) {
 const client = new SapphireClient({
     defaultPrefix: process.env.PREFIX,
     intents: '14071',
-    presence: { status: 'online', activities: [{ name: 'for tickets! | t.invite', type: 'WATCHING' }] },
+    presence: { status: 'online', activities: [{ name: 'for tickets! | t.help', type: 'WATCHING' }] },
     loadDefaultErrorListeners: true,
     defaultCooldown: {
         limit: 1,

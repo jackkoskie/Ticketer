@@ -28,7 +28,7 @@ export default class setupCommand extends Command {
         });
         if (!supportRole) return;
 
-        const botMessage = await message.reply(`Are you sure you want to set ${message.channel} as a support channel and ${supportRole} as the support role?? It will overwrite any other support channels in this server. Reply \'yes\' to confirm. (This message will expire in 30 seconds)`);
+        const botMessage = await message.reply(`Are you sure you want to set ${message.channel} as a support channel and ${supportRole} as the support role? It will overwrite any other support channels in this server. Reply \'yes\' to confirm. (This message will expire in 30 seconds)`);
 
         const filter = (msg: Message) => { return msg.author.id === message.author.id };
         const collector = channel.createMessageCollector({

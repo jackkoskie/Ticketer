@@ -60,7 +60,7 @@ export default class setupCommand extends Command {
 
                 await message.guild?.channels.cache.get(channel.id)?.edit({
                     topic: '© Ticketer, 2021',
-                    rateLimitPerUser: 900, // 15 min
+                    rateLimitPerUser: 300, // 5 min
                     permissionOverwrites: [
                         {
                             id: message.guild.id,
@@ -83,7 +83,7 @@ export default class setupCommand extends Command {
                         },
                         {
                             name: 'Can\'t send messages?',
-                            value: 'There is a 15 minute cool down between creating tickets to prevent spam. Please wait this out before sending another message.'
+                            value: 'There is a 5 minute cool down between creating tickets to prevent spam. Please wait this out before sending another message.'
                         }
                     ],
                     footer: {

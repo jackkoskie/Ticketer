@@ -13,7 +13,7 @@ export default class setupCommand extends Command {
     async messageRun(message: Message, args: Command.ParsePreProcessResult<this>) {
         const { channel } = message;
 
-        if (!message.member?.permissions.has("ADMINISTRATOR")) return message.reply("You don't have permission to do that!");
+        if (!message.member?.permissions.has("MANAGE_CHANNELS")) return message.reply("You don't have permission to do that!");
 
         if (channel.type != 'GUILD_TEXT') return message.reply('You can only use text channels as support channels.');
 

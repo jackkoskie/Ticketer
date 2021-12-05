@@ -1,4 +1,4 @@
-// Invite: https://discord.com/api/oauth2/authorize?client_id=891340733582299186&permissions=8&scope=bot%20applications.commands
+// Invite: https://discord.com/api/oauth2/authorize?client_id=908507710151065600&permissions=536874064&scope=bot%20applications.commands
 
 import { SapphireClient } from "@sapphire/framework";
 

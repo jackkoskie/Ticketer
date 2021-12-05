@@ -10,6 +10,6 @@ export default class InviteCommand extends Command {
     }
 
     messageRun(message: Message) {
-        message.reply(`https://discordapp.com/oauth2/authorize?client_id=${client?.user?.id}&permissions=536874064&scope=applications.commands%20bot`);
+        message.reply(`https://discordapp.com/oauth2/authorize?client_id=${client?.user?.id}&permissions=805366864&scope=applications.commands%20bot`);
     }
 }
